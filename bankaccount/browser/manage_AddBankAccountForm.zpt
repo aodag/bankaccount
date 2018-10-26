@@ -1,0 +1,4 @@
+<form method="post" action="manage_AddBankAccount">
+<input name="id"/>
+<input type="submit"/>
+</form>

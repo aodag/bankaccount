@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html metal:define-macro="html">
+
+<head>
+
+</head>
+
+<body>
+    <metal:main define-slot="main"></metal:main>
+</body>
+
+</html>

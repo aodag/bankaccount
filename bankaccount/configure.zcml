@@ -1,0 +1,46 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:browser="http://namespaces.zope.org/browser">
+    <five:registerPackage package="." initialize=".initialize"/>
+    <include package="plone.z3cform" />
+
+    <permission
+        id="bankaccount.deposit"
+        title="Deposit to BankAccount">
+        <role name="Owner"/>
+    </permission>
+
+    <permission
+        id="bankaccount.withdraw"
+        title="Withdraw from BankAccount">
+        <role name="Owner"/>
+    </permission>
+
+    <browser:page
+        for=".interfaces.IBankAccount"
+        name="standard_html"
+        template="browser/standard_html.zpt"
+        permission="zope2.View"/>
+
+    <browser:page
+        for=".interfaces.IBankAccount"
+        name="index_html"
+        template="browser/index_html.zpt"
+        permission="zope2.View"/>
+
+    <browser:page
+        for=".interfaces.IBankAccount"
+        name="deposit"
+        class=".views.DepositFormView"
+        template="browser/form_html.zpt"
+        permission="bankaccount.deposit"/>
+
+    <browser:page
+        for=".interfaces.IBankAccount"
+        name="withdraw"
+        class=".views.WithdrawFormView"
+        template="browser/form_html.zpt"
+        permission="bankaccount.withdraw"/>
+
+</configure>

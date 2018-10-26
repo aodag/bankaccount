@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<metal:html use-macro="context/@@standard_html/macros/html">
+
+    <head>
+
+    </head>
+
+    <body metal:fill-slot="main">
+        <h1>Bank Account</h1>
+        by ${context/getOwner}
+        <div>
+            Balance: ${context/balance}
+        </div>
+        <div>
+            <a href="@@deposit">Deposit</a>
+        </div>
+        <div>
+            <a href="@@withdraw">Withdraw</a>
+        </div>
+    </body>
+
+</metal:html>

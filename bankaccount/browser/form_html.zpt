@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<metal:html use-macro="context/@@standard_html/macros/html">
+
+    <head>
+
+    </head>
+
+    <body metal:fill-slot="main">
+        <h1 tal:content="view/label">View Title</h1>
+        <div id="layout-contents">
+            <span tal:replace="structure view/contents" />
+        </div>
+    </body>
+
+</metal:html>

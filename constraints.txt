@@ -1,0 +1,1 @@
+https://github.com/zopefoundation/plone.z3cform/archive/master.zip#egg=plone.z3cform
